@@ -45,59 +45,82 @@ sudo ufw status verbose
 
 3. Allowing and Denying Traffic
 
-Allow a Port: Permits traffic on a specific port.
-bash
-Copy code
-sudo ufw allow [port]
-Example: Allow HTTP traffic on port 80
-bash
-Copy code
-sudo ufw allow 80
-Deny a Port: Blocks traffic on a specific port.
-bash
-Copy code
-sudo ufw deny [port]
-Example: Deny HTTP traffic on port 80
-bash
-Copy code
-sudo ufw deny 80
-Allowing/Denying by IP Address
+-> Allow a Port: Permits traffic on a specific port.
 
-Allow by IP: Allows traffic from a specified IP address.
-bash
-Copy code
+```bash
+sudo ufw allow [port]
+```
+
+Example: Allow HTTP traffic on port 80
+
+```bash
+sudo ufw allow 80
+```
+
+-> Deny a Port: Blocks traffic on a specific port.
+
+```bash
+sudo ufw deny [port]
+```
+
+Example: Deny HTTP traffic on port 80
+
+```bash
+sudo ufw deny 80
+```
+
+4. Allowing/Denying by IP Address
+
+-> Allow by IP: Allows traffic from a specified IP address.
+
+```bash
 sudo ufw allow from [IP_address]
+```
+
 Example: Allow traffic from 192.168.1.1
-bash
-Copy code
+
+```bash
 sudo ufw allow from 192.168.1.1
-Deny by IP: Blocks traffic from a specified IP address.
-bash
-Copy code
+```
+
+-> Deny by IP: Blocks traffic from a specified IP address.
+
+```bash
 sudo ufw deny from [IP_address]
+```
+
 Example: Deny traffic from 192.168.1.1
-bash
-Copy code
+
+```bash
 sudo ufw deny from 192.168.1.1
-Default Policies
+```
+
+5. Default Policies
 
 Configure default policies for incoming and outgoing traffic.
-bash
-Copy code
+
+```bash
 sudo ufw default allow outgoing
 sudo ufw default deny incoming
-Deleting Rules
+```
 
-Delete by Rule Number: Removes a rule by specifying its number from the status list.
-bash
-Copy code
+6. Deleting Rules
+
+**Delete by Rule Number**: Removes a rule by specifying its number from the status list.
+
+```bash
 sudo ufw delete [rule_number]
-Delete by Specification: Removes a rule by specifying the exact rule.
-bash
-Copy code
+```
+
+**Delete by Specification:** Removes a rule by specifying the exact rule.
+
+```bash
 sudo ufw delete allow 80
-Advanced UFW Commands
-Allowing Specific Services
+```
+
+## Advanced UFW Commands
+
+1. Allowing Specific Services
 
 UFW supports predefined service names listed in /etc/services.
 bash
