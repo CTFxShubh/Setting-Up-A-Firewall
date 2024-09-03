@@ -97,7 +97,7 @@ sudo ufw deny from 192.168.1.1
 
 5. Default Policies
 
-Configure default policies for incoming and outgoing traffic.
+-> Configure default policies for incoming and outgoing traffic.
 
 ```bash
 sudo ufw default allow outgoing
@@ -122,7 +122,7 @@ sudo ufw delete allow 80
 
 1. Allowing Specific Services
 
-UFW supports predefined service names listed in /etc/services.
+-> UFW supports predefined service names listed in /etc/services.
 
 ```bash
 sudo ufw allow ssh
@@ -131,7 +131,7 @@ sudo ufw allow http
 
 2. Allowing/Denying Ranges of IP Addresses
 
-Allow or deny a range of IP addresses.
+-> Allow or deny a range of IP addresses.
 
 ```bash
 sudo ufw allow from 192.168.0.0/24
@@ -140,7 +140,7 @@ sudo ufw deny from 192.168.0.0/24
 
 3. Rate Limiting
 
-Implement rate limiting to protect against brute-force attacks.
+-> Implement rate limiting to protect against brute-force attacks.
 
 ```bash
 sudo ufw limit ssh/tcp
