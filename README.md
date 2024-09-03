@@ -123,57 +123,74 @@ sudo ufw delete allow 80
 1. Allowing Specific Services
 
 UFW supports predefined service names listed in /etc/services.
-bash
-Copy code
+
+```bash
 sudo ufw allow ssh
 sudo ufw allow http
-Allowing/Denying Ranges of IP Addresses
+```
+
+2. Allowing/Denying Ranges of IP Addresses
 
 Allow or deny a range of IP addresses.
-bash
-Copy code
+
+```bash
 sudo ufw allow from 192.168.0.0/24
 sudo ufw deny from 192.168.0.0/24
-Rate Limiting
+```
+
+3. Rate Limiting
 
 Implement rate limiting to protect against brute-force attacks.
-bash
-Copy code
+
+```bash
 sudo ufw limit ssh/tcp
-Logging
-Enable Logging: Activates logging to monitor firewall activity.
-bash
-Copy code
+```
+
+## Logging
+
+1. Enable Logging: Activates logging to monitor firewall activity.
+
+```bash
 sudo ufw logging on
-Set Log Level: Adjusts the verbosity of the log.
-bash
-Copy code
+```
+
+2. Set Log Level: Adjusts the verbosity of the log.
+
+```bash
 sudo ufw logging low
 sudo ufw logging medium
 sudo ufw logging high
-Practical Examples
-Allowing HTTP and HTTPS Traffic
+```
 
-bash
-Copy code
+## Practical Examples
+
+1. Allowing HTTP and HTTPS Traffic
+
+```bash
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
-Allowing SSH Access Only from a Specific IP
+```
 
-bash
-Copy code
+2. Allowing SSH Access Only from a Specific IP
+
+```bash
 sudo ufw allow from 192.168.1.100 to any port 22
-Denying All Incoming Traffic Except for SSH
+```
 
-bash
+3. Denying All Incoming Traffic Except for SSH
 
+```bash
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp
-Setting Up Rate Limiting for SSH
+```
 
-bash
-Copy code
+4. Setting Up Rate Limiting for SSH
+
+```bash
 sudo ufw limit 22/tcp
-Conclusion
+```
+
+## Conclusion
+
 UFW provides a straightforward interface for managing firewall rules on Linux systems, enhancing security by controlling network traffic. By utilizing the above commands and examples, users can effectively configure and manage their firewall settings to meet their security needs.
