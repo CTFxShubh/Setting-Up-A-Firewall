@@ -2,7 +2,7 @@
 ## Setting Up a Firewall
 
 ## Introduction to UFW (Uncomplicated Firewall)
-
+ 
 UFW is a user-friendly command-line tool designed to manage firewall rules on Linux distributions such as Ubuntu, Debian, and Arch Linux. It serves as a simplified interface for managing iptables, the underlying packet filtering framework.
 
 ## Installation of UFW
