@@ -1,5 +1,4 @@
-# FUTURE_CS_02
-## Setting Up a Firewall
+# Setting Up a Firewall
 
 ## Introduction to UFW (Uncomplicated Firewall)
  
